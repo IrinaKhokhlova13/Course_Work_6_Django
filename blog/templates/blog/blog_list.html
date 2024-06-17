@@ -14,8 +14,8 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">ЯРассылки</h1>
-            <p class="lead text-body-secondary">Удобный сервис создания и отправки рассылок. Попробуй сейчас</p>
+            <h1 class="fw-light">Сервис управления рассылками</h1>
+            <p class="lead text-body-secondary">Сервис для создания и отправки рассылок.</p>
             <p>
                 {% if perms.blog.add_blog or user.is_superuser %}
                 <a href="{% url 'blog:create_record' %}" class="btn btn-primary my-2">Добавить блоговую запись</a>
@@ -26,9 +26,9 @@
 </section>
 <div class="container">
     <div class="row text-left">
-        <h3>Активных рассылок на данный момент: {{mailing_quantity_active}}</h3>
-        <h3>Всего рассылок на данный момент: {{mailing_quantity}}</h3>
-        <h3>Уникальных клиентов на данный момент: {{clients_unique_quantity}}</h3>
+        <h3>Количество активных рассылок на данный момент: {{mailing_quantity_active}}</h3>
+        <h3>Количество всех рассылок на данный момент: {{mailing_quantity}}</h3>
+        <h3>Количество уникальных клиентов на данный момент: {{clients_unique_quantity}}</h3>
     </div>
     <div class="row text-center">
         {% for object in records %}
